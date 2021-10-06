@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import useToggle from './useToggle';
-import { Checkbox, Grid, MenuItem, Menu, Select } from "@mui/material";
+import { Checkbox, Grid, MenuItem, Select } from "@mui/material";
 import { Edit } from "@mui/icons-material";
 
 function UserListItem(props) {
@@ -12,7 +12,7 @@ function UserListItem(props) {
   const options = ["Active", "Disabled", "Invited"];
   const optionsColors = {
     Active: "#68b667",
-    Disabled: "#4881b0",
+    Disabled: "#dd6262",
     Invited: "#4881b0",
   };
   const handleClickStatus = async (e) => {

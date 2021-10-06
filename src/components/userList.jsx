@@ -1,15 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import useFetchUsers from "./useFetchUsers";
 import UserListItem from "./userListItem";
+const {REACT_APP_API_URL} = process.env;
 
 
 function UserList() {
-  const [execute, users] = useFetchUsers("http://localhost:8080/users");
+  const [execute, users] = useFetchUsers(`${REACT_APP_API_URL}/users`);
   const [usersForDeletion, setUsersForDeletion] = useState([]);
   const history = useHistory();
-
   const checkUser = (id) => {
     setUsersForDeletion([...usersForDeletion, id]);
   };
@@ -22,7 +22,7 @@ function UserList() {
   const updateStatus = async (id, status) => {
     try {
       return await axios.post(
-        `http://localhost:8080/setUserStatus/${id}/${status}`
+        `${REACT_APP_API_URL}/setUserStatus/${id}/${status}`
       );
     } catch (e) {
       throw e;
@@ -32,7 +32,7 @@ function UserList() {
   const deleteUsers = async () => {
     try {
       if (usersForDeletion.length > 0) {
-        await axios.delete(`http://localhost:8080/deleteUsers`, {
+        await axios.delete(`${REACT_APP_API_URL}/deleteUsers`, {
           data: {
             ids: usersForDeletion,
           },

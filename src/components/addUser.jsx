@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+const {REACT_APP_API_URL} = process.env;
 
 function AddUser() {
   const { register, handleSubmit } = useForm();
   const history = useHistory();
   const submitForm = async (data) => {
     try {
-      await axios.post(`http://localhost:8080/addUser`, data );
+      await axios.post(`${REACT_APP_API_URL}/addUser`, data );
       history.push("/");
     } catch (e) {
       throw e;
