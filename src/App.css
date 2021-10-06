@@ -1,0 +1,144 @@
+body {
+  background-color: #f0f3f9;
+}
+
+.user-list {
+  width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 857px) {
+  .user-list {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 500px) {
+  .user-list {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.user-list-item {
+  background-color: #f0e7de;
+  border-radius: 7px 7px;
+  margin: 10px 0;
+}
+
+.user-list-name {
+  text-align: left;
+}
+
+.user-list-edit {
+  padding-top: 20px;
+  cursor: pointer;
+}
+
+.user-list-delete {
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.user-form { 
+  width: 50%;
+  margin: 0 auto;
+}
+
+.button-container {
+  text-align: right;
+}
+
+.custom-input-label {
+  display: block;
+  font-weight: bold;
+}
+
+.custom-input {
+  display: block;
+  border: 0;
+  outline: none;
+  background-color: #f0e7de;
+  font-size: 17px;
+  border-radius: 7px 7px;
+  font-weight: bold;
+  padding: 13px 22px;
+}
+
+.custom-input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(182, 182, 182);
+  opacity: 1; /* Firefox */
+}
+
+.custom-button {
+  margin: 10px 7px;
+  background-color: #007fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  transition: all 200ms ease;
+  cursor: pointer;
+  box-shadow: 0 4px 20px 0 rgba(61, 71, 82, 0.1), 0 0 0 0 rgba(0, 127, 255, 0);
+  border: none;
+}
+
+.custom-button:hover {
+  background-color: #0059b2;
+}
+
+.custom-button.active {
+  background-color: #004386;
+}
+
+.custom-button.focusVisible {
+  box-shadow: 0 4px 20px 0 rgba(61, 71, 82, 0.1), 0 0 0 5px rgba(0, 127, 255, 0.5);
+  outline: none;
+}
+
+.custom-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: 0 0 0 0 rgba(0, 127, 255, 0);
+}
+
+.App {
+  /* text-align: center; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #f0f3f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
