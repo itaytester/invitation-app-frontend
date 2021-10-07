@@ -8,7 +8,7 @@ function UserListItem(props) {
   const [stateUser, setStateUser] = useState(user);
   const [editMode, setEditMode] = useToggle(false);
   const [checked, setChecked] = useState(false);
-  const [showPen, setShowPen] = useToggle(false);
+  const [showPen, setShowPen] = useState(false);
   const options = ["Active", "Disabled", "Invited"];
   const optionsColors = {
     Active: "#68b667",
@@ -30,7 +30,7 @@ function UserListItem(props) {
   };
 
   return (
-    <Grid onMouseEnter={setShowPen} onMouseLeave={setShowPen} container className="user-list-item">
+    <Grid onMouseEnter={()=>setShowPen(true)} onMouseLeave={()=>setShowPen(false)} container className="user-list-item">
       <Grid className="user-list-delete" xs={1}>
         <Checkbox onChange={handleCheckForUser} checked={checked} />
       </Grid>
@@ -47,8 +47,9 @@ function UserListItem(props) {
             value={stateUser.status}
             label="Age"
             onChange={handleClickStatus}
+            onClose={()=>setShowPen(false)}
           >
-            {options.map((option, index) => (
+            {options.map((option) => (
               <MenuItem key={option} value={option}>
                 {option}
               </MenuItem>

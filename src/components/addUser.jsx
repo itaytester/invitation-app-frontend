@@ -20,21 +20,21 @@ function AddUser() {
       <label className="custom-input-label">User Name</label>
       <input
         {...register("firstName")}
-        className="custom-input"
+        className="custom-input input-width"
         placeholder="Enter First Name"
         type="text"
       />
       <label className="custom-input-label">Last Name</label>
       <input
         {...register("lastName")}
-        className="custom-input"
+        className="custom-input input-width"
         placeholder="Enter Last Name"
         type="text"
       />
       <label className="custom-input-label">Email</label>
       <input
         {...register("email")}
-        className="custom-input"
+        className="custom-input input-width"
         placeholder="Enter Email"
         type="text"
       />

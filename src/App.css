@@ -54,6 +54,10 @@ body {
   font-weight: bold;
 }
 
+.input-width {
+  width: 40%;
+}
+
 .custom-input {
   display: block;
   border: 0;
