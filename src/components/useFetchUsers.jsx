@@ -18,11 +18,11 @@ function useFetchUsers(url) {
 
   const execute = useCallback(() => {
     fetch();
-  });
+  },[url]);
 
   useEffect(() => {
     fetch();
-  });
+  }, [url]);
 
   return [execute, users, status ];
 }
